@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html data-require="math graphie graphie-geometry word-problems subhints">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ohm's Law</title>
+    <script data-main="../khan-exercises/local-only/main.js" src="../khan-exercises/local-only/require.js"></script>
+    <script src="../khan-exercises/local-only/jquery.js"></script>
+</head>
+<body >
+<div class="exercise">
+    <div class="vars">
+        <var id="UNIT,UNIT_TEXT">randFromArray(metricUnits.concat([genericUnit]))</var>
+    </div>
+    <div class="problems">
+        <div id="power-law" data-weight="0">
+            <div class="vars">
+                <var id="R_VALUE">randRange(10, 100)/10</var>
+                <var id="I_VALUE">randRange(1, 10)</var>
+                <var id="V_VALUE">I_VALUE*R_VALUE</var>
+            </div>
+
+            <div class="problem">
+                Find the power used by the resistor.
+            </div>
+
+            <p class="question">
+
+                <svg
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:cc="http://creativecommons.org/ns#"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        width="250"
+                        height="250"
+                        id="svg2"
+                        version="1.1"
+                        inkscape:version="0.48.5 r10040"
+                        sodipodi:docname="ohmslaw.svg">
+                    <defs
+                            id="defs4">
+                        <marker
+                                inkscape:stockid="TriangleOutM"
+                                orient="auto"
+                                refY="0.0"
+                                refX="0.0"
+                                id="TriangleOutM"
+                                style="overflow:visible">
+                            <path
+                                    id="path3953"
+                                    d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+                                    style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+                                    transform="scale(0.4)" />
+                        </marker>
+                        <marker
+                                inkscape:stockid="Arrow2Lend"
+                                orient="auto"
+                                refY="0.0"
+                                refX="0.0"
+                                id="Arrow2Lend"
+                                style="overflow:visible;">
+                            <path
+                                    id="path3829"
+                                    style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+                                    d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+                                    transform="scale(1.1) rotate(180) translate(1,0)" />
+                        </marker>
+                    </defs>
+                    <sodipodi:namedview
+                            id="base"
+                            pagecolor="#ffffff"
+                            bordercolor="#666666"
+                            borderopacity="1.0"
+                            inkscape:pageopacity="0.0"
+                            inkscape:pageshadow="2"
+                            inkscape:zoom="3.959798"
+                            inkscape:cx="145.80528"
+                            inkscape:cy="128.96922"
+                            inkscape:document-units="px"
+                            inkscape:current-layer="layer1"
+                            showgrid="false"
+                            inkscape:window-width="1600"
+                            inkscape:window-height="837"
+                            inkscape:window-x="-8"
+                            inkscape:window-y="-8"
+                            inkscape:window-maximized="1" />
+                    <metadata
+                            id="metadata7">
+                        <rdf:RDF>
+                            <cc:Work
+                                    rdf:about="">
+                                <dc:format>image/svg+xml</dc:format>
+                                <dc:type
+                                        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                <dc:title></dc:title>
+                            </cc:Work>
+                        </rdf:RDF>
+                    </metadata>
+                    <g
+                            inkscape:label="Layer 1"
+                            inkscape:groupmode="layer"
+                            id="layer1"
+                            transform="translate(0,-802.36218)">
+                        <g
+                                id="layer1-4"
+                                transform="translate(27.022853,899.07281)">
+                            <path
+                                    id="path2194"
+                                    style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                    d="M 25,10 25,3"
+                                    inkscape:connector-curvature="0" />
+                            <path
+                                    id="path2196"
+                                    style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                    d="m 25,40 0,7"
+                                    inkscape:connector-curvature="0" />
+                            <path
+                                    id="path2243"
+                                    style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                    d="m 25,14 0,6"
+                                    inkscape:connector-curvature="0" />
+                            <path
+                                    id="path2245"
+                                    style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                    d="m 28,17 -6,0"
+                                    inkscape:connector-curvature="0" />
+                            <path
+                                    id="path2247"
+                                    style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                    d="m 28,33.5 -6,0"
+                                    inkscape:connector-curvature="0" />
+                            <path
+                                    id="path2249"
+                                    style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+                                    d="m 40,25 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
+                                    inkscape:connector-curvature="0" />
+                        </g>
+                        <path
+                                id="path2997-0"
+                                d="m 154.04827,953.56773 0,-15 -5,-2.5 10,-5.00001 -10,-5 10,-5 -10,-5 10,-5 -5,-2.5 0,-15"
+                                inkscape:connector-curvature="0"
+                                style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:bevel" />
+                        <path
+                                style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                d="m 52.022856,902.10199 0,-13.13198"
+                                id="path3075"
+                                inkscape:connector-curvature="0" />
+                        <path
+                                style="fill:none;stroke:#000000;stroke-width:1.12934542px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                d="m 154.58767,888.52806 -102.943621,0"
+                                id="path3077"
+                                inkscape:connector-curvature="0" />
+                        <path
+                                style="fill:none;stroke:#000000;stroke-width:0.84363467px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                d="m 154.19089,954.07747 -102.80918,0"
+                                id="path3079"
+                                inkscape:connector-curvature="0" />
+                        <path
+                                style="fill:none;stroke:#000000;stroke-width:1.02331161px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                d="m 52.022856,945.93882 0,7.93349"
+                                id="path3081"
+                                inkscape:connector-curvature="0" />
+                        <path
+                                style="fill:none;stroke:#000000;stroke-width:1.04372156px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                d="m 154.04826,893.66933 0,-4.95186"
+                                id="path3087"
+                                inkscape:connector-curvature="0" />
+                        <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Chiller;-inkscape-font-specification:Chiller"
+       x="115.18222"
+       y="928.56738"
+       id="resistorText"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3089-4"><tspan
+         sodipodi:role="line"
+         id="resistorTspan"
+         x="115.18222"
+         y="928.56738"
+         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">?kΩ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Chiller;-inkscape-font-specification:Chiller"
+       x="4.3851891"
+       y="928.56738"
+       id="voltageText"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3089-4-1"><tspan
+         sodipodi:role="line"
+         id="voltageTspan"
+         x="4.3851891"
+         y="928.56738"
+         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">?V</tspan></text>
+                        <path
+                                style="fill:none;stroke:#000000;stroke-width:0.74237555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+                                d="m 89.403577,881.14133 28.531733,0"
+                                id="path3034"
+                                inkscape:connector-curvature="0" />
+                        <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Chiller;-inkscape-font-specification:Chiller"
+       x="92.015923"
+       y="875.78052"
+       id="currentText"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3089-4-1-4"><tspan
+         sodipodi:role="line"
+         id="currentTspan"
+         x="92.015923"
+         y="875.78052"
+         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">?mA</tspan></text>
+                    </g>
+                </svg>
+            </p>
+
+            <div class="hints">
+                <p>
+                    Use the Power Law, P=IV
+                </p>
+                <p>
+                    You may need Ohm's Law to solve for a missing value, or you can use an alternate form of the equation.
+                </p>
+                <p>
+                    <script>katex.render("P=\frac{V^{2}}{R}","hints3-powerlaw1");</script>
+                    <div id="hints3-powerlaw1"/> or <div id="hints3-powerlaw2"/>
+                </p>
+            </div>
+        </div>
+
+        <div id="power-law-1" data-type="power-law">
+            <div class="vars">
+                <var>document.getElementById('currentTspan').textContent=Math.round(I_VALUE*10)/10+"mA"</var>
+                <var>document.getElementById('voltageTspan').textContent=Math.round(V_VALUE*10)/10+"V"</var>
+            </div>
+            <div>
+                <p><b>Power in Watts</b></p>
+                <span class="solution" data-inexact data-max-error="0.1" data-type="decimal"><var>I_VALUE*V_VALUE</var></span>
+            </div>
+        </div>
+
+        <div id="power-law-2" data-type="power-law">
+            <div class="vars">
+                <var>document.getElementById('resistorTspan').textContent=Math.round(R_VALUE*10)/10+"kΩ"</var>
+                <var>document.getElementById('voltageTspan').textContent=Math.round(V_VALUE*10)/10+"V"</var>
+            </div>
+            <div>
+                <p><b>Power in Watts</b></p>
+                <span class="solution" data-inexact data-max-error="0.1" data-type="decimal"><var>I_VALUE*V_VALUE</var></span>
+            </div>
+        </div>
+
+        <div id="power-law-3" data-type="power-law">
+            <div class="vars">
+                <var>document.getElementById('resistorTspan').textContent=Math.round(R_VALUE*10)/10+"kΩ"</var>
+                <var>document.getElementById('currentTspan').textContent=Math.round(I_VALUE*10)/10+"mA"</var>
+            </div>
+            <div>
+                <p><b>Power in Watts</b></p>
+                <span class="solution" data-inexact data-max-error="0.1" data-type="decimal"><var>I_VALUE*V_VALUE</var></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
