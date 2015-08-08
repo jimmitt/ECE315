@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html data-require="math graphie graphie-geometry word-problems subhints">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Decision Matrix</title>
+    <script data-main="../khan-exercises/local-only/main.js" src="../khan-exercises/local-only/require.js"></script>
+</head>
+<body>
+<div class="exercise">
+    <div class="vars">
+        <var id="UNIT,UNIT_TEXT">randFromArray(metricUnits.concat([genericUnit]))</var>
+    </div>
+    <div class="problems">
+        <div id="odd-shape">
+            <div class="vars">
+                <var id="MOTORA_TORQUE">randRange(100, 200)</var>
+                <var id="MOTORA_WARRANTY">randRange(1, 5)</var>
+				<var id="MOTORA_COST">randRange(300, 500)</var>
+				
+				<var id="MOTORB_TORQUE">randRange(100, 200)</var>
+                <var id="MOTORB_WARRANTY">randRange(1, 5)</var>
+				<var id="MOTORB_COST">randRange(300, 500)</var>
+				
+				<var id="MOTORC_TORQUE">randRange(100, 200)</var>
+                <var id="MOTORC_WARRANTY">randRange(1, 5)</var>
+				<var id="MOTORC_COST">randRange(300, 500)</var>
+				
+				<var id="MOTORA_SOLUTION">0.3*MOTORA_TORQUE/Math.max(MOTORA_TORQUE,MOTORB_TORQUE,MOTORC_TORQUE)+.2*MOTORA_WARRANTY/Math.max(MOTORA_WARRANTY,MOTORB_WARRANTY,MOTORC_WARRANTY)+.5*Math.min(MOTORA_COST,MOTORB_COST,MOTORC_COST)/MOTORA_COST</var>
+				<var id="MOTORB_SOLUTION">0.3*MOTORB_TORQUE/Math.max(MOTORA_TORQUE,MOTORB_TORQUE,MOTORC_TORQUE)+.2*MOTORB_WARRANTY/Math.max(MOTORA_WARRANTY,MOTORB_WARRANTY,MOTORC_WARRANTY)+.5*Math.min(MOTORA_COST,MOTORB_COST,MOTORC_COST)/MOTORB_COST</var>
+				<var id="MOTORC_SOLUTION">0.3*MOTORC_TORQUE/Math.max(MOTORA_TORQUE,MOTORB_TORQUE,MOTORC_TORQUE)+.2*MOTORC_WARRANTY/Math.max(MOTORA_WARRANTY,MOTORB_WARRANTY,MOTORC_WARRANTY)+.5*Math.min(MOTORA_COST,MOTORB_COST,MOTORC_COST)/MOTORC_COST</var>
+                
+            </div>
+
+            <div class="problem">
+                Determine the total value for each motor and identify the best motor.
+            </div>
+			
+			<p class="question">
+                <table width="90%">
+				<tr bgcolor="#AAAAAA"><td><b>Motor</b></td><td><b>Torque (N-m)</b></td><td><b>Warranty (Years)</b></td><td><b>Cost ($)</b></td></tr>
+				<tr bgcolor="#AAAAAA"><td></td><td><span class="show-definition" data-definition="torque-weight"><b>0.3</b></span></td><td><b>0.2</b></td><td><b>0.5</b></td></tr>
+				<tr bgcolor="#DDDDDD"><td>A</td><td><var>MOTORA_TORQUE</var></td><td><var>MOTORA_WARRANTY</var></td><td><var>MOTORA_COST</var></td></tr>
+				<tr bgcolor="#FFFFFF"><td>B</td><td><var>MOTORB_TORQUE</var></td><td><var>MOTORB_WARRANTY</var></td><td><var>MOTORB_COST</var></td></tr>
+				<tr bgcolor="#DDDDDD"><td>C</td><td><var>MOTORC_TORQUE</var></td><td><var>MOTORC_WARRANTY</var></td><td><var>MOTORC_COST</var></td></tr>
+				</table>
+				<div class="definition" id="torque-weight">
+					I don't actually know what this means, but it sounds pretty cool!
+				</div>
+            </p>          
+
+            <div class="solution" data-type="multiple">
+			
+				<table width="90%" align="center">
+				<tr><td>
+					<p><b>Motor A Total</b></p>
+					<span class="sol" data-inexact data-max-error="0.1" data-forms="decimal"><var>MOTORA_SOLUTION</var></span>
+				</td><td>
+					<p><b>Motor B Total</b></p>
+					<span class="sol" data-inexact data-max-error="0.1" data-forms="decimal"><var>MOTORB_SOLUTION</var></span>
+				</td><td>
+					<p><b>Motor C Total</b></p>
+					<span class="sol" data-inexact data-max-error="0.1" data-forms="decimal"><var>MOTORC_SOLUTION</var></span>
+				</td></tr></table>
+				<p><b>Best Option</b></p>
+								
+					<span data-if="MOTORA_SOLUTION > MOTORB_SOLUTION">
+						<span data-if="MOTORA_SOLUTION > MOTORC_SOLUTION" class="sol" data-type="list" data-choices="['A','B','C']">A</span>
+						<span data-else-if="MOTORC_SOLUTION > MOTORA_SOLUTION" class="sol" data-type="list" data-choices="['A','B','C']">C</span>
+					</span>
+					<span data-else>
+						<span data-if="MOTORB_SOLUTION > MOTORC_SOLUTION" class="sol" data-type="list" data-choices="['A','B','C']">B</span>
+						<span data-else class="sol" data-type="list" data-choices="['A','B','C']">C</span>
+					</span>
+				</span>
+            </div>
+
+            <div class="hints">
+                <p>
+                    Normalize the values in each column.
+                </p>
+                <p>
+					Multiply the normalized value in each cell by the weight for that column.
+				</p>
+                <p>
+                    Add the weighted values to get a total for each motor.  The motor with the highest value is the best option.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
