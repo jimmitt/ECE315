@@ -213,27 +213,25 @@
          style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">?mA</tspan></text>
                     </g>
                 </svg>
-
-
             </p>
 
             <div class="hints">
                 <p>
-                    Find resistors that are in parallel or series and use the corresponding formula for equivalent resistance.
+                    Use Ohm's Law, V=IR
                 </p>
                 <p>
-                    For series, Req = R1+R2+R3+...  For parallel, 1/Req = 1/R1+1/R2+1/R3+...
+                    V is the voltage source (circle with a + and -), I is the current (depicted by an arrow), and R is the resistance (a zig zag line)
                 </p>
                 <p>
-                    Continue combining until you have a single resistor value.
+                    Rearrange the equation, if needed.  I=V/R or R=V/I
                 </p>
             </div>
         </div>
 
         <div id="ohms-law-1" data-type="ohms-law">
             <div class="vars">
-                <var>document.getElementById('currentTspan').textContent=I_VALUE+"mA"</var>
-                <var>document.getElementById('voltageTspan').textContent=V_VALUE+"V"</var>
+                <var>document.getElementById('currentTspan').textContent=Math.round(I_VALUE*10)/10+"mA"</var>
+                <var>document.getElementById('voltageTspan').textContent=Math.round(V_VALUE*10)/10+"V"</var>
             </div>
             <div class="solution">
                 <p><b>Resistance in kΩ</b></p>
@@ -243,8 +241,8 @@
 
         <div id="ohms-law-2" data-type="ohms-law">
             <div class="vars">
-                <var>document.getElementById('resistorTspan').textContent=R_VALUE+"kΩ"</var>
-                <var>document.getElementById('voltageTspan').textContent=V_VALUE+"V"</var>
+                <var>document.getElementById('resistorTspan').textContent=Math.round(R_VALUE*10)/10+"kΩ"</var>
+                <var>document.getElementById('voltageTspan').textContent=Math.round(V_VALUE*10)/10+"V"</var>
             </div>
             <div class="solution">
                 <p><b>Current in mA</b></p>
@@ -254,8 +252,8 @@
 
         <div id="ohms-law-3" data-type="ohms-law">
             <div class="vars">
-                <var>document.getElementById('resistorTspan').textContent=R_VALUE+"kΩ"</var>
-                <var>document.getElementById('currentTspan').textContent=I_VALUE+"mA"</var>
+                <var>document.getElementById('resistorTspan').textContent=Math.round(R_VALUE*10)/10+"kΩ"</var>
+                <var>document.getElementById('currentTspan').textContent=Math.round(I_VALUE*10)/10+"mA"</var>
             </div>
             <div class="solution">
                 <p><b>Voltage</b></p>
