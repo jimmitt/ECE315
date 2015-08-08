@@ -2,7 +2,7 @@
 <html data-require="math graphie graphie-geometry word-problems subhints">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Equivalent Resistance</title>
+    <title>Ohm's Law</title>
     <script data-main="../khan-exercises/local-only/main.js" src="../khan-exercises/local-only/require.js"></script>
 	<script src="../khan-exercises/local-only/jquery.js"></script>
 </head>
@@ -12,21 +12,19 @@
         <var id="UNIT,UNIT_TEXT">randFromArray(metricUnits.concat([genericUnit]))</var>
     </div>
     <div class="problems">
-        <div id="odd-shape">
+        <div id="ohms-law">
             <div class="vars">
-                <var id="R1_VALUE">randRange(1, 10)*100</var>
-                <var id="R2_VALUE">randRange(1, 10)*100</var>
-				<var id="R3_VALUE">randRange(1, 10)*100</var>
-				<var>document.getElementById('tspan3091').textContent=R1_VALUE+"Ω"</var>
-				<var>document.getElementById('tspan3091-8').textContent=R2_VALUE+"Ω"</var>
-				<var>document.getElementById('tspan3091-2').textContent=R3_VALUE+"Ω"</var>
+                <var id="R_VALUE">randRange(10, 100)/10</var>
+                <var id="I_VALUE">randRange(1, 10)</var>
+				<var id="V_VALUE">I_VALUE*R_VALUE</var>
             </div>
 
             <div class="problem">
-                Determine the equivalent resistance for the circuit.
+                Find the missing value.
             </div>
 			
 			<p class="question">
+		
 			<svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -40,9 +38,36 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="ohmslaw.svg">
   <defs
-     id="defs4" />
+     id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="TriangleOutM"
+       style="overflow:visible">
+      <path
+         id="path3953"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         id="path3829"
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -50,9 +75,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="218.78484"
-     inkscape:cy="74.650032"
+     inkscape:zoom="3.959798"
+     inkscape:cx="145.80528"
+     inkscape:cy="128.96922"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -78,11 +103,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-802.36218)">
-    <path
-       id="path2997"
-       d="m 78.911575,888.54353 15,0 2.5,-5 5.000005,10 5,-10 5,10 5,-10 5,10 2.5,-5 15,0"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:bevel" />
     <g
        id="layer1-4"
        transform="translate(27.022853,899.07281)">
@@ -123,41 +143,24 @@
        inkscape:connector-curvature="0"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:bevel" />
     <path
-       id="path2997-0-9"
-       d="m 195.46452,954.57789 0,-15 -5,-2.5 10,-5.00001 -10,-5 10,-5 -10,-5 10,-5 -5,-2.5 0,-15"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:bevel"
-       inkscape:transform-center-x="5.5"
-       inkscape:transform-center-y="-4.5456865" />
-    <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 52.022856,902.10199 0,-13.13198"
        id="path3075"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 79.296975,888.52806 -27.779195,0"
+       style="fill:none;stroke:#000000;stroke-width:1.12934542px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 154.58767,888.52806 -102.943621,0"
        id="path3077"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.99822748px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 195.46452,954.07747 -143.940188,0"
+       style="fill:none;stroke:#000000;stroke-width:0.84363467px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 154.19089,954.07747 -102.80918,0"
        id="path3079"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.02331161px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 52.022856,945.93882 0,7.93349"
        id="path3081"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1.00386977px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 138.43554,888.5389 57.5162,0"
-       id="path3083"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1.0333215px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 195.46452,894.68368 0,-6.47156"
-       id="path3085"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1.04372156px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -167,47 +170,56 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Chiller;-inkscape-font-specification:Chiller"
-       x="98.76272"
-       y="905.89008"
-       id="text3089"
-       sodipodi:linespacing="125%"><tspan
+       x="115.18222"
+       y="928.56738"
+       id="resistorText"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3089-4"><tspan
          sodipodi:role="line"
-         id="tspan3091"
-         x="98.76272"
-         y="905.89008"
-         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">
-		 </tspan></text>
+         id="resistorTspan"
+         x="115.18222"
+         y="928.56738"
+         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">?kΩ</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Chiller;-inkscape-font-specification:Chiller"
-       x="110.45506"
-       y="928.09265"
-       id="text3089-4"
-       sodipodi:linespacing="125%"><tspan
+       x="4.3851891"
+       y="928.56738"
+       id="voltageText"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3089-4-1"><tspan
          sodipodi:role="line"
-         id="tspan3091-8"
-         x="110.45506"
-         y="928.09265"
-         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">
-		 </tspan></text>
+         id="voltageTspan"
+         x="4.3851891"
+         y="928.56738"
+         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">?V</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.74237555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+       d="m 89.403577,881.14133 28.531733,0"
+       id="path3034"
+       inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Chiller;-inkscape-font-specification:Chiller"
-       x="203.17589"
-       y="928.09265"
-       id="text3089-8"
-       sodipodi:linespacing="125%"><tspan
+       x="92.015923"
+       y="875.78052"
+       id="currentText"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3089-4-1-4"><tspan
          sodipodi:role="line"
-         id="tspan3091-2"
-         x="203.17589"
-         y="928.09265"
-         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"></tspan></text>
-</g>
+         id="currentTspan"
+         x="92.015923"
+         y="875.78052"
+         style="font-size:14px;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">?mA</tspan></text>
+  </g>
 </svg>
-            </p>          
-			<p><b>Equivalent Resistance</b>
+			
+			
+            </p>         
+			
+			
             <span class="solution" data-inexact data-max-error="0.1" data-type="decimal"><var>R1_VALUE+1/(1/R2_VALUE+1/R3_VALUE)</var></p>
-
+<p><b>Equivalent Resistance</b>
             <div class="hints">
                 <p>
                     Find resistors that are in parallel or series and use the corresponding formula for equivalent resistance.
@@ -220,7 +232,30 @@
                 </p>
             </div>
         </div>
-    </div>
-</div>
+		
+
+
+	<div id="ohms-law-1" data-type="ohms-law">
+		<div class="vars">
+				<var>document.getElementById('currentTspan').textContent=I_VALUE+"mA"</var>
+				<var>document.getElementById('voltageTspan').textContent=V_VALUE+"V"</var>
+		</div>
+	</div>
+	
+	<div id="ohms-law-2" data-type="ohms-law">
+		<div class="vars">
+				<var>document.getElementById('resistorTspan').textContent=R_VALUE+"kΩ"</var>
+				<var>document.getElementById('voltageTspan').textContent=V_VALUE+"V"</var>
+		</div>
+	</div>
+	
+	<div id="ohms-law-3" data-type="ohms-law">
+		<div class="vars">
+				<var>document.getElementById('resistorTspan').textContent=R_VALUE+"kΩ"</var>
+				<var>document.getElementById('currentTspan').textContent=I_VALUE+"mA"</var>
+		</div>
+	</div>
+	    </div>
+	</div>
 </body>
 </html>
